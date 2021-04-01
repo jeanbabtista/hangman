@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
+    <script src="./Hangman.js" defer></script>
+    <script src="./Game.js" defer></script>
+    <script src="./script.js" defer></script>
+
+    <title>Hangman</title>
+</head>
+<body>
+    <nav class="light-blue darken-4">
+        <div class="nav-wrapper container">
+            <a href="." class="brand-logo left">Hangman</a>
+        </div>
+    </nav>
+
+    <div id="game" class="container hidden">
+        <div class="row valign-wrapper">
+            <div class="col s6">
+                <canvas id="hangman"></canvas>
+            </div>
+
+            <div id="word" class="col s6"> 
+                <div id="hidden-chars"><!-- _ _ _ _ _ ... --></div>
+
+                <div id="history-div">
+                    <h3 class="light-blue-text text-lighten-5">History:</h3>
+                    <span class="light-blue-text text-lighten-5">[</span>
+                    <span id="history-closed-bracket" class="light-blue-text text-lighten-5">]</span>
+                </div>
+
+                <p id="warning">Start typing!</p>
+            </div>
+        </div>
+
+        <div class="row light-blue darken-4 border-radius z-depth-3">
+            <div id="keyboard"></div>
+        </div>
+
+        <div id="over-modal" class="modal">
+            <div class="modal-content">
+                <p id="over-text"></p>
+                <a id="over-btn" class="waves-effect waves-light btn blue" href=".">Play again</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading">
+        <h1 class="">Loading ...</h1>
+    </div>
+</body>
+</html>

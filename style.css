@@ -1,0 +1,79 @@
+html {
+    background-color: rgb(0, 55, 107);
+}
+
+#loading {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.hidden {
+    display: none;
+}
+
+#game {
+    margin-top: 50px;
+}
+
+.border-radius {
+    border-radius: 10px;
+}
+
+#hidden-chars {
+    display: flex;
+}
+
+.hidden-char {
+    margin-right: 8px;
+    padding: 16px;
+    color: rgb(0, 55, 107);
+    background-color: white;
+    border-radius: 5px;
+}
+
+#history-div * {
+    display: inline-block;
+    font-size: 32px;
+}
+
+#history-div h3, #history-div span:first-of-type {
+    padding-right: 5px;
+}
+
+#history-div span {
+    padding: 10px;
+}
+
+#keyboard {
+    padding-top: 16px;
+}
+
+#keyboard .line {
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+}
+
+#keyboard .key {
+    background-color: white;
+    padding: 16px;
+    margin: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#keyboard .key.locked {
+    background-color: darkgray !important;
+    cursor: default !important;
+}
+
+#keyboard .key.clicked {
+    background-color: rgb(1,87,155);
+    box-shadow: none;
+}
+
+#keyboard .key.clicked.locked {
+    background-color: rgb(92, 92, 92) !important;
+}
